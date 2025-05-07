@@ -1,31 +1,3 @@
-def year_filter(filter_dict):
-    run = True
-    while run:
-        # show prechosen year
-        print("\nFilter:", end=" ")
-        for n in filter_dict["year_filter"]:
-            print(n, end=" ")
-        print()
-
-
-        print("Enter = Escape\nc = clear\nEnter year:")
-        user = input(">")
-
-        # clears year or return to main program
-        if user == "":
-            run = False
-            continue
-        if user == "c":
-            filter_dict["year_filter"] = []
-            continue
-
-        # adds year to filter dictnary
-        try:
-            user = int(user.strip())
-            filter_dict["year_filter"].append(user)
-        except:
-            print("\n\33[31minvalid\33[00m\n")
-
 def turtle_year(add_on_spots):
     import turtle
     import time

@@ -1,35 +1,3 @@
-def age_rating_filter(filter_dict):
-    run = True
-    while run:
-        # chosen age ratings
-        print("Filter:",end=" ")
-        for n in filter_dict["age_filter"]:
-            print(filter_dict[n], end=" ")
-        print()
-
-        print("Age Ratings:\n1.G\n2.PG\n3.PG-13\n4.R\n5.NC-17\n6.Clear\n\nEnter = Back")
-        current = input(">")
-
-        # allows te user to return to main program or clears filter
-        if current == "":
-            run = False
-            continue
-        elif current == "c":
-            filter_dict["age_filter"].clear()
-
-        try:
-            current = int(current)
-            if current > 0 and current < 6:
-                if current in filter_dict["age_filter"]:
-                    filter_dict["age_filter"].remove(current)
-                else:
-                    filter_dict["age_filter"].append(current)
-            else:
-                print("\n\33[31minvalid\33[00m\n")
-
-        except:
-            print("\n\33[31minvalid\33[00m\n")
-
 def age_rating_filter_turtle():
     # set turtle
     import turtle

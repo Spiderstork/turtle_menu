@@ -1,25 +1,3 @@
-def time_filter(filter_dict):
-    run = True
-    while run:
-
-        print("Enter = Cancel\nEnter maximum time in minutes:")
-        user = input(">")
-
-        # allows the user to cancel
-        if user == "":
-            filter_dict["time_filter"] = 0
-            run = False
-            continue
-
-        # convert to int then return to main program
-        try:
-            user = int(user)
-            filter_dict["time_filter"] = user
-            run = False
-        except:
-            print("\n\33[31minvalid\33[00m\n")
-
-
 def time_filter_turtle(add_on_spots):
     import turtle
     import time
